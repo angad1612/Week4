@@ -1,0 +1,19 @@
+<head>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<form>
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="text" [(ngModel)]="email" name ="email" id="form2Example1" class="form-control" />
+      <label class="form-label" for="form2Example1">Email address</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password"  [(ngModel)]="password" id="form2Example2" name="password" class="form-control" />
+      <label class="form-label" for="form2Example2">Password</label>
+      <button (click)="login()" class="btn btn-primary btn-block mb-4" > Log In</button>
+      <p *ngIf="showError">Username and/or password invalid</p>
+    </div>    
+</form>
+  
